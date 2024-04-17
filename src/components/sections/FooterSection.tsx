@@ -56,9 +56,9 @@ const FooterSection = () => {
       </div>
       <div className="w-full flex justify-between items-center text-center py-6 md:py-12  border-b border-primary">
         <div>
-        <Image src="/images/loggo.png" alt="logo" width={96} height={66} className="rounded-md"/>
+          <a href="#home"><Image src="/images/loggo.png" alt="logo" width={96} height={66} className="rounded-md"/></a>
         </div>
-        <div className="flex items-center gap-[15px] select-none">
+        <div className="flex items-center gap-[15px] cursor-pointer">
           <Image src="/images/Facebook.png" alt="logo" width={16} height={16}/>
           <Image src="/images/YouTube.png" alt="logo" width={16} height={16}/>
           <Image src="/images/Instagram.png" alt="logo" width={16} height={16}/>
@@ -71,9 +71,10 @@ const FooterSection = () => {
       © 2024 All right reserved by Dakhineswar Electric
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <div className="overflow-y-auto max-h-[90vh]">
         <form onSubmit={handleSubmit} className="my-auto">
-          <div className="flex justify-between items-center">
-            <h2 className="text-xl font-semibold mb-4 my-auto">Contact Us</h2>
+          <div className="flex justify-between items-center text-center mb-2 md:mb-3 2xl:mb-4">
+            <h2 className="text-xl font-semibold my-auto text-center">Contact Us</h2>
             <button
               type="button"
               onClick={closeModal}
@@ -93,7 +94,7 @@ const FooterSection = () => {
             onChange={handleInputChange}
             className="block w-full mb-4 p-2 border rounded"
           >
-           <option value="">--Please choose an option--</option>
+            <option value="">--Please choose an option--</option>
             <option value="Steel">Steel & Metals</option>
             <option value="Energy">Energy</option>
             <option value="Food">Food & Beverages</option>
@@ -166,7 +167,7 @@ const FooterSection = () => {
           <textarea
             id="message"
             name="message"
-            rows={2}
+            rows={1}
             value={formData.message}
             onChange={handleInputChange}
             className="block w-full mb-2 p-2 border rounded"
@@ -174,11 +175,12 @@ const FooterSection = () => {
 
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-primary hover:bg-lightBlue hover:text-primary text-customCream font-bold py-2 px-4 rounded"
           >
             Send
           </button>
         </form>
+        </div>
       </Modal>
     </footer>
   );

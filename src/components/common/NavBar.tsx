@@ -29,7 +29,7 @@ function NavBar() {
   const NavLink = ({ href, children }:any) => (
     <a
       href={href}
-      className={`font-montserrat text-primary cursor-pointer flex items-center gap-2 text-base font-semibold rounded-xl px-4 py-2 transition-colors duration-200 ease-in-out bg-transparent hover:bg-primary hover:text-customCream ${
+      className={`font-montserrat text-primary cursor-pointer flex items-center text-base font-semibold rounded-xl px-3 2xl:px-4 py-2 transition-colors duration-200 ease-in-out bg-transparent hover:bg-primary hover:text-customCream ${
         activeSection === href.slice(1) ? 'bg-primary text-customCream' : ''
       }`}
     >
@@ -46,7 +46,7 @@ function NavBar() {
       {/* DESKTOP */}
       <div className=" hidden lg:block animate-in fade-in zoom-in bg-[#DBE2EF] p-2.5 rounded-b-md">
         <div className="flex justify-between md:mx-[9rem] items-center">
-          <div className="flex gap-[10px] 2xl:gap-[50px] text-[16px] items-center select-none">
+          <div className="flex gap-[5px] 2xl:gap-[50px] text-[16px] items-center select-none">
             <Image src="/images/loggo.png" alt="logo" width={96} height={66} className="rounded-md"/>
             <NavLink href="#home">Home</NavLink>
             <NavLink href="#about">About</NavLink>
@@ -105,7 +105,7 @@ function NavBar() {
               </p>
             </a> */}
             </div>
-          <div className="flex items-center gap-[15px] select-none">
+          <div className="flex items-center gap-[15px] cursor-pointer">
           <Image src="/images/Facebook.png" alt="logo" width={16} height={16}/>
           <Image src="/images/YouTube.png" alt="logo" width={16} height={16}/>
           <Image src="/images/Instagram.png" alt="logo" width={16} height={16}/>

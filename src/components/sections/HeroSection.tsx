@@ -72,7 +72,8 @@ function HeroSection() {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-      <form onSubmit={handleSubmit} className="my-auto">
+        <div className="overflow-y-auto max-h-[90vh]">
+        <form onSubmit={handleSubmit} className="my-auto">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-semibold mb-4 my-auto">Contact Us</h2>
             <button
@@ -167,7 +168,7 @@ function HeroSection() {
           <textarea
             id="message"
             name="message"
-            rows={2}
+            rows={1}
             value={formData.message}
             onChange={handleInputChange}
             className="block w-full mb-2 p-2 border rounded"
@@ -175,11 +176,13 @@ function HeroSection() {
 
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-primary hover:bg-lightBlue hover:text-primary text-customCream font-bold py-2 px-4 rounded"
           >
             Send
           </button>
         </form>
+        </div>
+      
       </Modal>
       {/* Remove the previous image div as it's no longer necessary */}
     </section>
