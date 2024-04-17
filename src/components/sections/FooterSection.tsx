@@ -63,7 +63,7 @@ const FooterSection = () => {
           <Image src="/images/YouTube.png" alt="logo" width={16} height={16}/>
           <Image src="/images/Instagram.png" alt="logo" width={16} height={16}/>
           <Image src="/images/Twitter.png" alt="logo" width={16} height={16}/>
-          <Image src="/images/Linkedin.png" alt="logo" width={16} height={16}/>
+          {/* <Image src="/images/Linkedin.png" alt="logo" width={16} height={16}/> */}
             {/* <MainButton text="Sign up" classes="shadow-none" /> */}
           </div>
       </div>
